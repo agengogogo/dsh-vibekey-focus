@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "VibeKey Composer Focus",
+    "description": "Keeps the conversation composer focused while the Harness window is active, so VibeKey or IME dictation lands in the message box; focuses the approval card when it appears so Enter/Escape work from the VibeKey."
+  }
+}

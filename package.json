@@ -1,0 +1,66 @@
+{
+  "name": "dsh-vibekey-focus",
+  "version": "0.1.0",
+  "description": "Keeps the DeepSeek Harness composer focused for VibeKey / IME dictation, and adds keyboard and knob focus for approval and ask-user-question cards.",
+  "type": "module",
+  "main": "index.js",
+  "icon": "./icon.svg",
+  "license": "MIT",
+  "author": "agengogogo",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agengogogo/dsh-vibekey-focus.git"
+  },
+  "homepage": "https://github.com/agengogogo/dsh-vibekey-focus#readme",
+  "bugs": {
+    "url": "https://github.com/agengogogo/dsh-vibekey-focus/issues"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "deepseek",
+    "vibekey",
+    "ulanzi",
+    "voice-input",
+    "dictation",
+    "composer",
+    "approval",
+    "ask-user-question"
+  ],
+  "engines": {
+    "dsh": ">=0.2.1-rc.3 <0.3.0"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
